@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Clinical Fermentation Science & Quality Standards</title>
+  <meta name="description"
+    content="Learn about CULTURA's clinical advisory board, batch testing protocols, active strain catalog, and scientific validation of fermented probiotics.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 768px) {
+      .advisory-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .advisory-card {
+      text-align: center;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+    }
+
+    body.dark-theme .advisory-card {
+      background: rgba(30, 30, 30, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .advisory-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: var(--bg-secondary);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--primary);
+    }
+
+    .advisory-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link">Gut Health</a>
+        <a href="science.html" class="nav-link active">Science</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link">Gut Health</a>
+      <a href="science.html" class="nav-link active">Science</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+      <a href="signup.html" class="nav-link" style="color: var(--primary); font-weight: 550;">Sign Up</a>
+    </nav>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="section-padding"
+    style="background-color: var(--bg-secondary); padding-top: 150px; text-align: center;">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Lab
+        Validation Protocols</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Modern Validation of Ancient Arts</h1>
+      <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-secondary);">How we apply cellular metrics,
+        metagenomic sequencing, and third-party laboratory oversight to verify raw bacterial potency.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Clinical Research Overview -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Scientific
+            Validation</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">The Clinical Science Baseline</h2>
+          <p style="margin-bottom: 20px;">While raw fermentations have sustained human populations for thousands of
+            years, modern medicine highlights exactly why these metabolic structures are vital. Peer-reviewed studies
+            verify that Lactic Acid Bacteria (LAB) act as immunomodulators, strengthening mucosal cell junctions.</p>
+          <p style="margin-bottom: 20px;">By converting complex dietary fibers into short-chain fatty acids (like
+            acetate, propionate, and butyrate), these live cultures lower local colon pH, forming a barrier against
+            pathogen invasions.</p>
+          <p style="font-weight: 550; color: var(--primary);">At CULTURA, we cross-reference every batch with molecular
+            strain markers to guarantee cellular survivability in stomach acids.</p>
+        </div>
+        <div class="visual-pane fade-in">
+          <!-- Unique science overview image -->
+          <img src="assets/images/lab.jpg" alt="Clinical lab environment testing fermented microbes">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Strain Catalog -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Microbial
+          Genomics</span>
+        <h2>Our Core Probiotic Strains</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px;">Metagenomic profiles of the dominant bacteria found
+          in CULTURA kimchi and milk kefirs.</p>
+      </div>
+
+      <div class="strain-card-grid">
+        <div class="strain-card fade-in">
+          <h3
+            style="font-family: var(--font-sans); font-size: 20px; font-weight: 540; color: var(--primary); margin-bottom: 12px; min-height: auto;">
+            Lactobacillus plantarum (CL-02)</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">Highly resilient strain found in cabbage ferments.
+            Known for its ability to survive gastric bile acids, helping synthesize L-lysine and promote bloating
+            relief.</p>
+        </div>
+        <div class="strain-card fade-in" style="border-left-color: var(--secondary);">
+          <h3
+            style="font-family: var(--font-sans); font-size: 20px; font-weight: 540; color: var(--secondary); margin-bottom: 12px; min-height: auto;">
+            Leuconostoc mesenteroides (CL-05)</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">Initiates the early stages of classic lactic
+            fermentation, producing high volumes of metabolic carbon dioxide which prevents ambient yeast mold.</p>
+        </div>
+        <div class="strain-card fade-in" style="border-left-color: var(--secondary);">
+          <h3
+            style="font-family: var(--font-sans); font-size: 20px; font-weight: 540; color: var(--secondary); margin-bottom: 12px; min-height: auto;">
+            Lactobacillus rhamnosus (KE-12)</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">Prevalent in our milk kefirs. Widely studied for
+            supporting immune barrier cell tight-junctions and regulating vaginal/gut ecosystem ratios.</p>
+        </div>
+        <div class="strain-card fade-in">
+          <h3
+            style="font-family: var(--font-sans); font-size: 20px; font-weight: 540; color: var(--primary); margin-bottom: 12px; min-height: auto;">
+            Saccharomyces kefir (KE-08)</h3>
+          <p style="font-size: 14px; color: var(--text-secondary);">A beneficial probiotic yeast grain cofactor that
+            digests remaining lactose sugars, converting them into healthy enzymes and supporting gut motility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Quality Testing Standards -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 60px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Transparency
+          logs</span>
+        <h2>Batch Analytics Testing Standards</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px;">To maintain luxury wellness status, every single
+          ferment batch undergoes a strict validation audit before leaving our facility.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/images/science1.jpg" alt="Heavy Metal Assays">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto;">Heavy Metal Assays</h3>
+            <p>We check agricultural soils and raw vegetables to guarantee zero lead, arsenic, or cadmium concentrations
+              contaminate our brines.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/images/science2.jpg" alt="Pathogen Barriers">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto;">Pathogen Barriers</h3>
+            <p>Lacto-ferments must drop below a safe pH threshold of 4.2. We test for E. coli, Salmonella, and Listeria
+              to ensure 100% biological safety.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <img src="assets/images/science3.jpg" alt="CFU Audit Logs">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto;">CFU Audit Logs</h3>
+            <p>Using flow cytometry techniques, we verify that cellular strain concentrations remain above 10 Billion
+              cells per serving at the date of shipping.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinical Advisory Board -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Scientific
+          Board</span>
+        <h2>Our Clinical Advisory Board</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px;">Guiding our sourcing, research audits, and
+          educational outputs to align with modern nutritional sciences.</p>
+      </div>
+
+      <div class="advisory-grid">
+        <div class="advisory-card">
+          <div class="advisory-avatar">
+            <img src="assets/images/doctor3.jpg" alt="Dr. Liam Zhao, PhD">
+          </div>
+          <h3
+            style="font-family: var(--font-sans); font-size: 18px; font-weight: 540; min-height: auto; text-align: center; justify-content: center; margin-bottom: 4px;">
+            Dr. Liam Zhao, PhD</h3>
+          <span
+            style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 550; display: block; margin-top: 4px;">Microbial
+            Genomics Lead</span>
+          <p style="font-size: 14px; margin-top: 16px; line-height: 1.6; text-align: center;">Dr. Zhao holds a doctorate
+            in microbiology and conducts sequencing evaluations on lacto-ferment species populations.</p>
+        </div>
+
+        <div class="advisory-card">
+          <div class="advisory-avatar">
+            <img src="assets/images/doctor1.jpg" alt="Dr. Sarah Sterling, MD">
+          </div>
+          <h3
+            style="font-family: var(--font-sans); font-size: 18px; font-weight: 540; min-height: auto; text-align: center; justify-content: center; margin-bottom: 4px;">
+            Dr. Sarah Sterling, MD</h3>
+          <span
+            style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 550; display: block; margin-top: 4px;">Gastroenterologist</span>
+          <p style="font-size: 14px; margin-top: 16px; line-height: 1.6; text-align: center;">Dr. Sterling has practiced
+            clinical gastroenterology for 15 years, integrating dietary live foods into patient care guidelines.</p>
+        </div>
+
+        <div class="advisory-card">
+          <div class="advisory-avatar">
+            <img src="assets/images/doctor2.jpg" alt="Maya Patel, RD, LDN">
+          </div>
+          <h3
+            style="font-family: var(--font-sans); font-size: 18px; font-weight: 540; min-height: auto; text-align: center; justify-content: center; margin-bottom: 4px;">
+            Maya Patel, RD, LDN</h3>
+          <span
+            style="font-size: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 550; display: block; margin-top: 4px;">Clinical
+            Nutritionist</span>
+          <p style="font-size: 14px; margin-top: 16px; line-height: 1.6; text-align: center;">Maya designs dietary
+            pairings, verifying nutritional data integrity and gut health digestive protocols.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
+            microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by
+          FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

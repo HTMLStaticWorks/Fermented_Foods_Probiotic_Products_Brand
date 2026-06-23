@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Probiotic Subscriptions & Custom Wellness Crates</title>
+  <meta name="description" content="Subscribe to CULTURA and save 15% on daily probiotic doses. Choose from monthly or bi-weekly deliveries of premium kimchi, kefir, and fermented sauces.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .selector-container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 40px auto;
+      max-width: 500px;
+      background-color: var(--bg-secondary);
+      padding: 8px;
+      border-radius: 40px;
+      border: 1px solid var(--border);
+    }
+    .selector-label {
+      flex: 1;
+      text-align: center;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 550;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .selector-label input[type="radio"] {
+      display: none;
+    }
+    .selector-label:has(input[type="radio"]:checked) {
+      background-color: var(--primary);
+      color: #FAF8F3;
+    }
+    .discount-pill {
+      font-size: 11px;
+      background-color: var(--secondary);
+      color: #FAF8F3;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    
+    .tier-card {
+      padding: 40px 32px;
+    }
+    
+    @media (max-width: 768px) {
+      .tier-card {
+        padding: 32px 20px;
+      }
+    }
+    
+    @media (max-width: 500px) {
+      .selector-container {
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 8px;
+        padding: 12px;
+      }
+      .selector-label {
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="subscriptions.html" class="nav-link active">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link">Gut Health</a>
+        <a href="science.html" class="nav-link">Science</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading" style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="subscriptions.html" class="nav-link active">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link">Gut Health</a>
+      <a href="science.html" class="nav-link">Science</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+    </nav>
+  </div>
+
+  <!-- Subscription Title -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); padding-top: 150px; text-align: center;">
+    <div class="container">
+      <span style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Direct-To-Consumer Program</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Microbiome Consistency, Delivered</h1>
+      <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-secondary);">Scientific research shows gut adaptation takes 2-4 weeks of daily fermented food intake. Secure your supply at a permanent discount.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Customizer Section -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Interval Selector -->
+      <div class="selector-container">
+        <label class="selector-label">
+          <input type="radio" name="sub-interval" value="monthly" checked>
+          <span>Monthly Delivery</span>
+        </label>
+        <label class="selector-label">
+          <input type="radio" name="sub-interval" value="biweekly">
+          <span>Bi-Weekly</span>
+          <span class="discount-pill">Save 15%</span>
+        </label>
+      </div>
+
+      <!-- Tiers Grid -->
+      <div class="subscription-tiers">
+        
+        <!-- Tier 1: Kickstart -->
+        <div class="tier-card">
+          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--secondary); font-weight: 550; margin-bottom: 8px; display: inline-block; text-align: start;">Daily Routine</span>
+          <h3 class="tier-title">Microbiome Kickstart</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; text-align: start;">Perfect for individuals beginning their wellness journey.</p>
+          
+          <div class="tier-price-container">
+            <span class="tier-price" data-base="25.00">$25.00</span>
+            <span class="tier-price-period">/ delivery</span>
+          </div>
+
+          <ul class="tier-features">
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">1 Classic Kimchi Jar (28-Day Ferment)</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">1 Artisan Milk Kefir Bottle (Raw Live)</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">Free insulated cold-pack shipping</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">Pause, edit, or cancel anytime</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-secondary" style="width: 100%;" onclick="alert('Kickstart Subscription Selected!');">Select This Plan</button>
+        </div>
+
+        <!-- Tier 2: Pantry (Featured) -->
+        <div class="tier-card featured">
+          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); font-weight: 550; margin-bottom: 8px; display: inline-block; text-align: start;">Wellness Staple</span>
+          <h3 class="tier-title">The Cultured Pantry</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; text-align: start;">Our most recommended plan for active couples and gut optimization.</p>
+          
+          <div class="tier-price-container">
+            <span class="tier-price" data-base="48.00">$48.00</span>
+            <span class="tier-price-period">/ delivery</span>
+          </div>
+
+          <ul class="tier-features">
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">2 Jars of Premium Classic Kimchi</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">2 Bottles of Milk Kefir (Rotational flavors)</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">1 Bottle of Habanero Hot Sauce</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">Member-only exclusive seasonal releases</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">Free insulated cold-pack shipping</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-primary" style="width: 100%;" onclick="alert('Pantry Subscription Selected!');">Select This Plan</button>
+        </div>
+
+        <!-- Tier 3: Family -->
+        <div class="tier-card">
+          <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--secondary); font-weight: 550; margin-bottom: 8px; display: inline-block; text-align: start;">Household Pack</span>
+          <h3 class="tier-title">The Family Gut Plan</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; text-align: start;">Designed to support health across multi-member families.</p>
+          
+          <div class="tier-price-container">
+            <span class="tier-price" data-base="85.00">$85.00</span>
+            <span class="tier-price-period">/ delivery</span>
+          </div>
+
+          <ul class="tier-features">
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">4 Jars of Premium Classic Kimchi</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">4 Bottles of Milk Kefir (Variety flavors)</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">2 Bottles of Oak-Aged Sauces</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">VIP Access: 1-on-1 nutritional support advice</span>
+            </li>
+            <li>
+              <span class="icon">âœ“</span>
+              <span class="content">Free insulated cold-pack shipping</span>
+            </li>
+          </ul>
+
+          <button class="btn btn-secondary" style="width: 100%;" onclick="alert('Family Subscription Selected!');">Select This Plan</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Standard vs. Member</span>
+        <h2>Why Join The Subscription Plan?</h2>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Perks & Privileges</th>
+              <th style="color: var(--text-secondary);">Standard Retail Buying</th>
+              <th style="color: var(--primary); font-weight: 550;">CULTURA Subscriber</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pricing Model</td>
+              <td>Full Retail Price</td>
+              <td style="color: var(--primary); font-weight: 550;">Permanent 15% discount (Bi-weekly)</td>
+            </tr>
+            <tr>
+              <td>Shipping cost</td>
+              <td>$9.99 flat rate</td>
+              <td style="color: var(--primary); font-weight: 550;">Always Free insulated cold shipping</td>
+            </tr>
+            <tr>
+              <td>Limited-Edition Flavors</td>
+              <td>If available (Usually out of stock)</td>
+              <td style="color: var(--primary); font-weight: 550;">Guaranteed access and early shipping</td>
+            </tr>
+            <tr>
+              <td>Delivery calendar</td>
+              <td>Manual re-purchase required</td>
+              <td style="color: var(--primary); font-weight: 550;">Fully automated on chosen interval</td>
+            </tr>
+            <tr>
+              <td>Flavor Swapping</td>
+              <td>No adjustments</td>
+              <td style="color: var(--primary); font-weight: 550;">Swap products via text or dashboard</td>
+            </tr>
+            <tr>
+              <td>Clinical Expert Hotline</td>
+              <td>Not included</td>
+              <td style="color: var(--primary); font-weight: 550;">Free portal to ask certified dieticians</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscriber benefits icons list -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 60px;">
+        <span style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Flexible Management</span>
+        <h2>Complete Control Over Your Delivery</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card" style="text-align: center;">
+          <div class="benefit-icon">
+            <img src="assets/images/level1.jpg" alt="Shift Calendars">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto; text-align: center; justify-content: center;">Shift Calendars</h3>
+            <p>Traveling next week? Easily delay your delivery or adjust the next dispatch date through a simple text message or your online profile.</p>
+          </div>
+        </div>
+        <div class="benefit-card" style="text-align: center;">
+          <div class="benefit-icon">
+            <img src="assets/images/level2.jpg" alt="Swap Items">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto; text-align: center; justify-content: center;">Swap Items</h3>
+            <p>Want more kefir and less kimchi this month? You can change items within your tier plan at any time before shipment locks.</p>
+          </div>
+        </div>
+        <div class="benefit-card" style="text-align: center;">
+          <div class="benefit-icon">
+            <img src="assets/images/level3.jpg" alt="Pause Anytime">
+          </div>
+          <div style="padding: 24px;">
+            <h3 class="benefit-title" style="min-height: auto; text-align: center; justify-content: center;">Pause Anytime</h3>
+            <p>No long-term contracts, no hidden cancellation penalties. Pause your subscriptions or stop completely with a single click.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Interactive Accordion) -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Support Guide</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>How are the products shipped?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Our raw probiotic foods are shipped in fully insulated, biodegradable liners packed with cold gel packs. This keeps the live bacteria cold-stabilized during transit. We suggest putting them in the fridge as soon as they arrive.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Can I customize the items in my subscription box?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Absolutely. Once you subscribe, you can log into your account dashboard at any time to swap products, add extra bottles of sauces, or increase/decrease quantities before your scheduled monthly shipping date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Are there any contracts or cancellation fees?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>None. Our subscription plans are designed around maximum flexibility to fit your lifestyle. You can pause, skip, or cancel your orders at any time without paying any penalties or cancellation charges.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>How long do the products last in the refrigerator?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-content">
+            <p>Because they are raw and active, they will continue to slowly ferment over time, even in the fridge. Our kimchi jars have a refrigerator shelf life of 6 months, kefir bottles last 3-4 weeks, and aged sauces stay fresh for up to a year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control" style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

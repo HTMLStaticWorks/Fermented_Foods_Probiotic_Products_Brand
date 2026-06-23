@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Probiotic Recipes & Fermented Food Pairings</title>
+  <meta name="description"
+    content="Discover healthy fermented recipes. Learn how to cook with raw kimchi, milk kefir, and fermented sauces to boost gut health.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .recipe-filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .recipe-tag-filter {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 520;
+      transition: var(--transition);
+    }
+
+    .recipe-tag-filter.active,
+    .recipe-tag-filter:hover {
+      background-color: var(--primary);
+      color: #FAF8F3;
+      border-color: var(--primary);
+    }
+
+    .recipe-meta-inline {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 550;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link">Gut Health</a>
+        <a href="science.html" class="nav-link">Science</a>
+        <a href="recipes.html" class="nav-link active">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link">Gut Health</a>
+      <a href="science.html" class="nav-link">Science</a>
+      <a href="recipes.html" class="nav-link active">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+      <a href="signup.html" class="nav-link" style="color: var(--primary); font-weight: 550;">Sign Up</a>
+    </nav>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="section-padding"
+    style="background-color: var(--bg-secondary); padding-top: 150px; text-align: center;">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Probiotic
+        Gastronomy</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Cultured Kitchen Pairings</h1>
+      <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-secondary);">Incorporate raw, gut-active
+        ingredients into your everyday cooking. Preserve active bacterial enzymes with our curated pairings.</p>
+    </div>
+  </section>
+
+  <!-- Filter & Recipes Grid -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Categories Tag Filter -->
+      <div class="recipe-filter-container">
+        <button class="recipe-tag-filter active" data-category="all">All Recipes</button>
+        <button class="recipe-tag-filter" data-category="breakfast">Breakfast Recipes</button>
+        <button class="recipe-tag-filter" data-category="lunch">Lunch Ideas</button>
+        <button class="recipe-tag-filter" data-category="dinner">Dinner Pairings</button>
+        <button class="recipe-tag-filter" data-category="smoothies">Smoothies</button>
+        <button class="recipe-tag-filter" data-category="snacks">Healthy Snacks</button>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div class="product-grid">
+
+        <!-- Recipe 1: Breakfast -->
+        <div class="product-card recipe-card" data-category="breakfast">
+          <div class="product-card-image" style="height: 220px;">
+            <!-- Unique image for oats recipe -->
+            <img src="assets/images/recipe1.jpg" alt="Probiotic Oats Berry Bowl">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Breakfast</span>
+                <span>â€¢ Prep: 5m</span>
+                <span>â€¢ Easy</span>
+              </div>
+              <h3 class="product-title">Kefir Oats Berry Bowl</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">A gut-restoring overnight bowl
+                packed with active prebiotics and fibers.</p>
+
+              <!-- Standardized bullet lists with icon/content blocks -->
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1/2 Cup CULTURA Milk Kefir</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1/2 Cup Organic rolled oats</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Fresh raspberries & blueberries</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tsp Chia seeds & honey</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="product-details.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Buy
+                Required Kefir &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipe 2: Lunch -->
+        <div class="product-card recipe-card" data-category="lunch">
+          <div class="product-card-image" style="height: 220px;">
+            <!-- Unique image for toast recipe -->
+            <img src="assets/images/recipe2.jpg" alt="Avocado Toast with Kimchi">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Lunch Ideas</span>
+                <span>â€¢ Prep: 10m</span>
+                <span>â€¢ Easy</span>
+              </div>
+              <h3 class="product-title">Kimchi Avocado Toast</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">Tangy cabbage lacto-strains sliced
+                over creamy fats to stabilize glucose absorption.</p>
+
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">2-3 Tbsp CULTURA Premium Kimchi</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Ripe Hass avocado</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Sourdough toast slice</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Chili flakes & sea salt</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="product-details.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Buy
+                Required Kimchi &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipe 3: Dinner -->
+        <div class="product-card recipe-card" data-category="dinner">
+          <div class="product-card-image" style="height: 220px;">
+            <!-- Unique image for dinner bowl recipe -->
+            <img src="assets/images/recipe3.jpg" alt="Quinoa Bowl with Fermented Sauce">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Dinner Pairings</span>
+                <span>â€¢ Prep: 15m</span>
+                <span>â€¢ Medium</span>
+              </div>
+              <h3 class="product-title">Gut-Glory Quinoa Bowl</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">Warm quinoa and steamed greens
+                drizzled with raw fermented hot sauce to activate digestion.</p>
+
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tbsp CULTURA Habanero Sauce</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Cup Cooked organic quinoa</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Broccolini & organic sweet potato</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Poached farm egg</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="product-details.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Buy
+                Required Sauce &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipe 4: Smoothies -->
+        <div class="product-card recipe-card" data-category="smoothies">
+          <div class="product-card-image" style="height: 220px;">
+            <img src="assets/images/recipe4.jpg" alt="Probiotic Greens Smoothie">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Smoothies</span>
+                <span>â€¢ Prep: 5m</span>
+                <span>â€¢ Easy</span>
+              </div>
+              <h3 class="product-title">Cultured Green Vitality</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">A highly absorbable liquid
+                nutrition base containing massive counts of active yeasts.</p>
+
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">3/4 Cup CULTURA Milk Kefir</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Handful Fresh organic spinach</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1/2 Frozen banana</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tbsp Flax seed meal</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="product-details.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Buy
+                Required Kefir &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipe 5: Snacks -->
+        <div class="product-card recipe-card" data-category="snacks">
+          <div class="product-card-image" style="height: 220px;">
+            <img src="assets/images/recipe5.jpg" alt="Probiotic Veggie Dip">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Healthy Snacks</span>
+                <span>â€¢ Prep: 5m</span>
+                <span>â€¢ Easy</span>
+              </div>
+              <h3 class="product-title">Spiced Probiotic Veggie Dip</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">Creamy kefir dip combined with hot
+                sauce, perfect to consume with crisp organic carrots.</p>
+
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1/2 Cup Strain-dripped Kefir cream</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tsp CULTURA Habanero Sauce</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Squeeze of fresh lemon</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Celery & carrot sticks</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="products.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Shop Collection
+                &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recipe 6: Dressings -->
+        <div class="product-card recipe-card" data-category="snacks">
+          <div class="product-card-image" style="height: 220px;">
+            <img src="assets/images/recipe6.png" alt="Kefir Herb Ranch Dressing">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <div class="recipe-meta-inline">
+                <span>Dressings</span>
+                <span>â€¢ Prep: 5m</span>
+                <span>â€¢ Easy</span>
+              </div>
+              <h3 class="product-title">Kefir Herb Ranch Dressing</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 8px;">Tangy, creamy probiotic ranch made
+                with strained kefir, fresh dill, and chives. Pours beautifully over salads and grain bowls.</p>
+
+              <ul class="bullet-list" style="margin-block: 16px;">
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">3/4 Cup Strained CULTURA Kefir</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tbsp Fresh dill &amp; chives</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">1 Tsp Garlic powder &amp; lemon juice</span>
+                </li>
+                <li>
+                  <span class="icon">â€¢</span>
+                  <span class="content">Sea salt &amp; cracked black pepper</span>
+                </li>
+              </ul>
+            </div>
+            <div class="product-footer">
+              <a href="product-details.html" style="font-weight: 550; color: var(--primary); font-size: 13px;">Buy
+                Required Kefir &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Probiotic Meal Planner Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Nutrition
+          Planning</span>
+        <h2 style="margin-top: 12px;">Weekly Probiotic Meal Planner</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 560px; margin-inline: auto;">Build a 7-day
+          gut-restoration schedule using CULTURA products at every meal. Rotate strains daily for maximum microbiome
+          diversity.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+          <thead>
+            <tr style="background-color: var(--primary); color: #FAF8F3;">
+              <th style="padding: 16px 20px; text-align: start; font-size: 13px; font-weight: 550;">Day</th>
+              <th style="padding: 16px 20px; text-align: start; font-size: 13px; font-weight: 550;">Breakfast</th>
+              <th style="padding: 16px 20px; text-align: start; font-size: 13px; font-weight: 550;">Lunch</th>
+              <th style="padding: 16px 20px; text-align: start; font-size: 13px; font-weight: 550;">Dinner</th>
+              <th style="padding: 16px 20px; text-align: start; font-size: 13px; font-weight: 550;">Snack</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 16px 20px; font-weight: 550; color: var(--primary); font-size: 14px;">Monday</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kefir Oats Bowl</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kimchi Avocado Toast</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Quinoa Bowl + Sauce</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Veggie Dip</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background-color: var(--bg-secondary);">
+              <td style="padding: 16px 20px; font-weight: 550; color: var(--primary); font-size: 14px;">Wednesday</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Green Vitality Smoothie
+              </td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kimchi Grain Salad</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kefir Ranch Salmon Bowl
+              </td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kefir Ranch Dip</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 16px 20px; font-weight: 550; color: var(--primary); font-size: 14px;">Friday</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kefir Oats Bowl</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kimchi Avocado Toast</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Hot Sauce Rice Bowl</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Veggie Dip</td>
+            </tr>
+            <tr style="background-color: var(--bg-secondary);">
+              <td style="padding: 16px 20px; font-weight: 550; color: var(--primary); font-size: 14px;">Sunday</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Green Vitality Smoothie
+              </td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kimchi Fried Cauliflower
+                Rice</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Gut-Glory Quinoa Bowl</td>
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-secondary);">Kefir Ranch Dressing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        style="margin-top: 32px; padding: 24px 32px; background: var(--bg-secondary); border-radius: 12px; border-left: 4px solid var(--secondary); display: flex; align-items: flex-start; gap: 16px;">
+        <span style="font-size: 24px;">&#128161;</span>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin: 0;"><strong>Pro
+            Tip:</strong> Rotate between kimchi and kefir daily to expose your gut to different bacterial strains. This
+          biodiversity strengthens immune resilience and reduces digestive adaptation time from days to hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fermentation Workshops Section -->
+  <section class="section-padding"
+    style="background: linear-gradient(160deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Learn
+          &amp; Create</span>
+        <h2 style="margin-top: 12px;">Fermentation Workshops &amp; Classes</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px; max-width: 560px; margin-inline: auto;">Master the art
+          and science of fermentation with our clinical nutritionists and master fermenters at our Napa Valley studio.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+
+        <div class="product-card fade-in" style="overflow: hidden;">
+          <div style="height: 200px; overflow: hidden;">
+            <img src="assets/images/level1.jpg" alt="Kimchi Fundamentals Workshop"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+          </div>
+          <div style="padding: 28px;">
+            <span
+              style="font-size: 11px; font-weight: 550; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Beginner</span>
+            <h3 style="margin-top: 8px; margin-bottom: 12px; min-height: auto;">Kimchi Fundamentals</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Learn the
+              ancient Korean art of lacto-fermented cabbage. Leave with a 1-gallon crock of your own hand-crafted kimchi
+              and a full strain identification kit.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 14px; font-weight: 550; color: var(--primary);">&#36;89 / Session</span>
+              <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Reserve
+                Seat</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" style="overflow: hidden;">
+          <div style="height: 200px; overflow: hidden;">
+            <img src="assets/images/level2.jpg" alt="Milk Kefir Mastery Workshop"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+          </div>
+          <div style="padding: 28px;">
+            <span
+              style="font-size: 11px; font-weight: 550; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Intermediate</span>
+            <h3 style="margin-top: 8px; margin-bottom: 12px; min-height: auto;">Milk Kefir Mastery</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Grow, feed,
+              and harvest live kefir grain clusters. Explore grain microbiome diversity, pH calibration, and how to
+              produce therapeutic-grade kefir at home.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 14px; font-weight: 550; color: var(--primary);">&#36;119 / Session</span>
+              <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Reserve
+                Seat</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" style="overflow: hidden;">
+          <div style="height: 200px; overflow: hidden;">
+            <img src="assets/images/level3.jpg" alt="Hot Sauce Craft Lab Workshop"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+          </div>
+          <div style="padding: 28px;">
+            <span
+              style="font-size: 11px; font-weight: 550; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Advanced</span>
+            <h3 style="margin-top: 8px; margin-bottom: 12px; min-height: auto;">Hot Sauce Craft Lab</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Blend and
+              ferment your own signature hot sauces. Explore pepper fermentation cycles, pH testing, and bottling
+              methods used in our commercial facility.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 14px; font-weight: 550; color: var(--primary);">&#36;139 / Session</span>
+              <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Reserve
+                Seat</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef Tip -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <div class="container" style="max-width: 700px; text-align: center;">
+      <h3 style="margin-bottom: 16px;">Chef's Probiotic Tip</h3>
+      <p style="font-size: 16px; color: var(--text-secondary); line-height: 1.8; font-weight: 420;">To preserve the
+        trillions of active probiotic cells in CULTURA products, **never cook or boil them directly**. Heat pasteurizes
+        the bacteria and eliminates the enzyme benefits. Instead, add raw kimchi, kefir, and sauces as cold garnishes or
+        stir them into warm plates just before serving!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
+            microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by
+          FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

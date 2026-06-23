@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Classic Premium Kimchi Details</title>
+  <meta name="description" content="View details, ingredients, nutrition facts, and fermentation methods of CULTURA's Classic Premium Kimchi.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .order-option-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      background-color: var(--surface);
+    }
+    body.dark-theme .order-option-card {
+      background: rgba(30, 30, 30, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .order-option-card:hover, .order-option-card.active {
+      border-color: var(--primary);
+      box-shadow: var(--card-shadow-hover);
+    }
+    .order-option-card input[type="radio"] {
+      accent-color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+    .details-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 20px;
+      background-color: var(--bg-secondary);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .review-stars {
+      color: var(--secondary);
+      font-size: 18px;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link">Gut Health</a>
+        <a href="science.html" class="nav-link">Science</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading" style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link">Gut Health</a>
+      <a href="science.html" class="nav-link">Science</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+    </nav>
+  </div>
+
+  <!-- Breadcrumbs & Main Section -->
+  <section class="section-padding" style="padding-top: 130px;">
+    <div class="container">
+      <div style="font-size: 14px; margin-bottom: 24px; color: var(--text-secondary); text-align: start;">
+        <a href="products.html">Products</a> &nbsp;/&nbsp; <a href="products.html?category=kimchi">Kimchi Collection</a> &nbsp;/&nbsp; <span style="color: var(--text-primary)">Classic Premium Kimchi</span>
+      </div>
+
+      <div class="product-details-grid">
+        <!-- Left: Image Gallery -->
+        <div class="details-gallery">
+          <div class="gallery-main">
+            <img src="assets/kimchi_classic.webp" alt="CULTURA Classic Premium Kimchi main view">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb active"><img src="assets/kimchi_classic.webp" alt="View 1"></div>
+            <!-- Unique thumbnail image references -->
+            <div class="gallery-thumb"><img src="assets/founders_home.webp" alt="View 2"></div>
+            <div class="gallery-thumb"><img src="assets/lifestyle_home.webp" alt="View 3"></div>
+          </div>
+        </div>
+
+        <!-- Right: Information & Actions -->
+        <div style="text-align: start;">
+          <span style="font-size: 12px; font-weight: 550; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em; display: inline-block; margin-bottom: 8px;">Wild-Crafted Lactic Acid Culture</span>
+          <h1 style="font-size: 42px; margin-bottom: 8px;">Classic Premium Kimchi</h1>
+          
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+            <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
+            <span style="font-size: 14px; color: var(--text-secondary);">(128 reviews)</span>
+          </div>
+
+          <p style="font-size: 16px; margin-bottom: 32px;">A traditional Korean-style kimchi cold-fermented for exactly 28 days to yield maximum microbiota density. Tangy, crunchy, complex, and moderately spiced with premium Gochugaru peppers.</p>
+
+          <!-- Core Metas -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px;">
+            <div class="details-meta-item">
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550;">Fermentation</span>
+              <span style="font-size: 16px; font-weight: 550; color: var(--primary);">28 Days</span>
+            </div>
+            <div class="details-meta-item">
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550;">Active Strains</span>
+              <span style="font-size: 16px; font-weight: 550; color: var(--primary);">12B CFU/srv</span>
+            </div>
+            <div class="details-meta-item">
+              <span style="font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550;">USDA Organic</span>
+              <span style="font-size: 16px; font-weight: 550; color: var(--primary);">100% Certified</span>
+            </div>
+          </div>
+
+          <!-- Purchase Selector -->
+          <div style="margin-bottom: 32px;">
+            <!-- One Time -->
+            <label class="order-option-card active" id="option-onetime">
+              <input type="radio" name="purchase-type" value="onetime" checked>
+              <div style="flex-grow: 1;">
+                <div style="font-weight: 550; display: flex; justify-content: space-between;">
+                  <span>One-time Purchase</span>
+                  <span id="price-onetime">$14.00</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-secondary);">Single jar, shipped cold.</div>
+              </div>
+            </label>
+
+            <!-- Subscribe & Save -->
+            <label class="order-option-card" id="option-sub">
+              <input type="radio" name="purchase-type" value="subscribe">
+              <div style="flex-grow: 1;">
+                <div style="font-weight: 550; display: flex; justify-content: space-between;">
+                  <span>Subscribe & Save (15% Off)</span>
+                  <span id="price-sub" style="color: var(--primary);">$11.90</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-secondary);">Delivered every 30 days. Pause/cancel anytime. Free shipping.</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Add to Cart & Buy CTA -->
+          <div style="display: flex; gap: 16px; margin-bottom: 48px;">
+            <button class="btn btn-primary" style="flex-grow: 1;" onclick="alert('Added to cart!');">Add To Cart</button>
+            <a href="subscriptions.html" class="btn btn-secondary">Customize Subscription</a>
+          </div>
+
+          <!-- Tab System -->
+          <div>
+            <div class="tab-headers">
+              <div class="tab-header active" data-tab="tab-ingredients">Ingredients</div>
+              <div class="tab-header" data-tab="tab-nutrition">Nutrition Facts</div>
+              <div class="tab-header" data-tab="tab-method">Fermentation Method</div>
+              <div class="tab-header" data-tab="tab-benefits">Gut Health Benefits</div>
+            </div>
+
+            <!-- Tab Ingredients -->
+            <div class="tab-content active" id="tab-ingredients">
+              <p style="font-size: 15px; line-height: 1.8; margin-bottom: 12px;"><strong>Ingredients:</strong> Napa Cabbage*, Daikon Radish*, Gochugaru Chili Flakes*, Purified Water, Sea Salt, Sweet Onion*, Fresh Garlic*, Fresh Ginger Root*, Green Onion*.</p>
+              <p style="font-size: 13px; font-style: italic;">*Certified Organic Ingredient. Keep refrigerated. Keep raw.</p>
+            </div>
+
+            <!-- Tab Nutrition -->
+            <div class="tab-content" id="tab-nutrition">
+              <div class="nutrition-label">
+                <div class="nutrition-header">
+                  <h3>Nutrition Facts</h3>
+                  <div style="font-size: 14px; border-bottom: 6px solid var(--text-primary); padding-bottom: 4px;">About 10 servings per container</div>
+                  <div style="display: flex; justify-content: space-between; font-weight: 550; font-size: 16px; border-bottom: 1px solid var(--text-primary); padding: 4px 0;">
+                    <span>Serving size</span>
+                    <span>2 Tbsp (28g)</span>
+                  </div>
+                </div>
+                <div class="nutrition-row bold" style="border-bottom: 6px solid var(--text-primary); font-size: 18px; padding: 6px 0;">
+                  <span>Amount per serving <br><span style="font-size: 24px; font-weight: 550;">Calories</span></span>
+                  <span style="font-size: 32px; font-weight: 550; line-height: 1;">10</span>
+                </div>
+                <div style="text-align: right; font-weight: 550; font-size: 11px; padding: 4px 0; border-bottom: 1px solid var(--text-primary);">% Daily Value*</div>
+                <div class="nutrition-row">
+                  <span><span style="font-weight: 550;">Total Fat</span> 0g</span>
+                  <span style="font-weight: 550;">0%</span>
+                </div>
+                <div class="nutrition-row">
+                  <span>Sodium 160mg</span>
+                  <span style="font-weight: 550;">7%</span>
+                </div>
+                <div class="nutrition-row">
+                  <span><span style="font-weight: 550;">Total Carbohydrate</span> 2g</span>
+                  <span style="font-weight: 550;">1%</span>
+                </div>
+                <div class="nutrition-row indent">
+                  <span>Dietary Fiber 1g</span>
+                  <span style="font-weight: 550;">4%</span>
+                </div>
+                <div class="nutrition-row indent">
+                  <span>Total Sugars 0g</span>
+                  <span></span>
+                </div>
+                <div class="nutrition-row" style="border-bottom: 6px solid var(--text-primary);">
+                  <span><span style="font-weight: 550;">Protein</span> 1g</span>
+                  <span></span>
+                </div>
+                <div style="font-size: 11px; padding-top: 8px; line-height: 1.3;">
+                  * The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Method -->
+            <div class="tab-content" id="tab-method">
+              <p style="margin-bottom: 16px;">We practice traditional **Lacto-Fermentation** relying on native wild microflora. Cabbages are packed by hand into temperature-regulated fermentation tanks where air is excluded.</p>
+              <p>For 28 days, ambient lactic acid bacteria generate lactic acid, converting natural sugars, increasing active probiotic counts, and dropping pH levels to a stable 3.8. The result is a sharp, tangy crunch that is completely natural.</p>
+            </div>
+
+            <!-- Tab Benefits -->
+            <div class="tab-content" id="tab-benefits">
+              <ul class="bullet-list">
+                <li>
+                  <span class="icon">ðŸ§¬</span>
+                  <span class="content"><strong>Microbiome Expansion:</strong> Diverse lactic-acid bacteria support digestive tract linings.</span>
+                </li>
+                <li>
+                  <span class="icon">ðŸ›¡ï¸</span>
+                  <span class="content"><strong>Digestive Enzymes:</strong> Raw active enzymes facilitate easier protein and carb absorption.</span>
+                </li>
+                <li>
+                  <span class="icon">ðŸ¥¬</span>
+                  <span class="content"><strong>Rich Phytochemicals:</strong> Preserved vitamins A, C, and K directly nurture systemic cellular health.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 48px;">Pairing Recommendations</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-card-image" style="height: 240px;">
+            <img src="assets/kefir_artisan.webp" alt="Artisan Milk Kefir Bottle">
+          </div>
+          <div class="product-card-info" style="padding: 20px;">
+            <div>
+              <span class="product-meta">Kefir Collection</span>
+              <h3 class="product-title" style="font-size: 20px;">Artisan Milk Kefir</h3>
+              <p class="product-excerpt" style="font-size: 13px; margin-bottom: 12px;">Tangy and thick milk kefir fermented from organic grass-fed whole milk.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price" style="font-size: 16px;">$11.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px;">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image" style="height: 240px;">
+            <img src="assets/sauce_chili.webp" alt="Fermented Sauce Bottle">
+          </div>
+          <div class="product-card-info" style="padding: 20px;">
+            <div>
+              <span class="product-meta">Fermented Sauces</span>
+              <h3 class="product-title" style="font-size: 20px;">Fermented Habanero Sauce</h3>
+              <p class="product-excerpt" style="font-size: 13px; margin-bottom: 12px;">Fruity habanero peppers aged in oak barrels to develop complex enzyme notes.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price" style="font-size: 16px;">$16.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px;">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image" style="height: 240px;">
+            <img src="assets/kimchi_daikon.webp" alt="Daikon Radish Kimchi Jar">
+          </div>
+          <div class="product-card-info" style="padding: 20px;">
+            <div>
+              <span class="product-meta">Kimchi Collection</span>
+              <h3 class="product-title" style="font-size: 20px;">Daikon Radish Kimchi</h3>
+              <p class="product-excerpt" style="font-size: 13px; margin-bottom: 12px;">Crisp, cubed daikon radish cold-fermented with garlic, spring onions, and sea salt.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price" style="font-size: 16px;">$15.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 11px;">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;" onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control" style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple option card selection toggle
+    const optionCards = document.querySelectorAll('.order-option-card');
+    optionCards.forEach(card => {
+      card.addEventListener('click', () => {
+        optionCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        const input = card.querySelector('input[type="radio"]');
+        if (input) input.checked = true;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Gut Health Education & Microbiome Basics</title>
+  <meta name="description"
+    content="Explore CULTURA's educational hub. Learn about the gut microbiome, the benefits of live fermented foods, and take our interactive quiz to find your ideal culture.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .quiz-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+      max-width: 680px;
+      margin: 40px auto 0;
+    }
+
+    body.dark-theme .quiz-card {
+      background: rgba(30, 30, 30, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 500px) {
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .quiz-option-label {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition);
+      text-align: start;
+    }
+
+    .quiz-option-label:hover {
+      border-color: var(--primary);
+      background-color: var(--bg-secondary);
+    }
+
+    .quiz-option-label input {
+      accent-color: var(--primary);
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link active">Gut Health</a>
+        <a href="science.html" class="nav-link">Science</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <a href="products.html" class="btn btn-secondary"
+          style="padding: 8px 20px; font-size: 12px; display: inline-flex;">Shop Now</a>
+        <a href="subscriptions.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 12px;">Subscribe</a>
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home-2.html" class="nav-link">Home 2</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link active">Gut Health</a>
+      <a href="science.html" class="nav-link">Science</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+    </nav>
+  </div>
+
+  <!-- Banner -->
+  <section class="section-padding"
+    style="background-color: var(--bg-secondary); padding-top: 150px; text-align: center;">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Educational
+        Hub</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">The Ecology Within You</h1>
+      <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-secondary);">Demystifying the gut microbiome,
+        probiotic cell pathways, and the biological importance of eating raw living organisms daily.</p>
+    </div>
+  </section>
+
+  <!-- Article 1: What is the Microbiome -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="visual-pane fade-in">
+          <!-- Unique image for this section -->
+          <img src="assets/images/microscopic.jpg" alt="Microscopic probiotic active cell colonies">
+        </div>
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Microbial
+            Ecology</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">What is the Gut Microbiome?</h2>
+          <p style="margin-bottom: 20px;">Deep within your digestive tract lives a community of over 100 trillion
+            microbesâ€”bacteria, viruses, and fungi. Together, this ecosystem is known as the **gut microbiome**. It works
+            as a fully functional organ, helping synthesize essential vitamins, manage blood glucose response, and
+            protect against cellular pathogens.</p>
+          <p style="margin-bottom: 20px;">Modern sterile diets, chemical preservatives, and stress degrade the diversity
+            of this ecosystem, leading to digestive issues, chronic brain fog, skin flares, and fatigued energy levels.
+          </p>
+          <p style="font-weight: 550; color: var(--primary);">Re-populating this internal forest with raw, unpasteurized
+            bacteria is the most natural way to re-establish physiological balance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article 2: Raw vs Pasteurized -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="editorial-grid reverse">
+        <div class="visual-pane fade-in">
+          <!-- Unique image for this section -->
+          <img src="assets/images/kitchen.jpg" alt="Clean kitchen showing organic crop preparation and wild-yeast jars">
+        </div>
+        <div class="fade-in" style="text-align: start;">
+          <span
+            style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Cold-Chain
+            Biology</span>
+          <h2 style="margin-top: 12px; margin-bottom: 24px;">The Raw Advantage: Active vs. Pasteurized</h2>
+          <p style="margin-bottom: 20px;">Many shelf-stable grocery store kimchis and kefirs are heat-pasteurized. While
+            this extends their shelf life, the thermal processing kills the beneficial live organisms completely,
+            leaving you with simple flavoring rather than probiotic wellness.</p>
+          <p style="margin-bottom: 20px;">CULTURA products are kept entirely raw and active. We control fermentation
+            with cold-stabilization, slowing but not stopping bacterial activity. Every single bite delivers live,
+            active strains of Lactobacillus plantarum, Leuconostoc mesenteroides, and Saccharomyces grains directly to
+            your system.</p>
+          <a href="science.html" class="btn btn-primary">Our Lab Quality Standards</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Quiz Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 40px;" class="fade-in">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Gut
+          Matcher</span>
+        <h2>Find Your Ideal Cultured Pair</h2>
+        <p style="color: var(--text-secondary); margin-top: 12px;">Take our brief clinical quiz to determine which
+          fermented food or starter kit fits your dietary experience and wellness goals.</p>
+      </div>
+
+      <div class="quiz-card fade-in" id="quiz-result">
+        <form id="gut-quiz-form">
+
+          <!-- Question 1 -->
+          <div style="margin-bottom: 32px;">
+            <h4
+              style="font-family: var(--font-sans); font-size: 18px; font-weight: 500; margin-bottom: 16px; text-align: start;">
+              1. What is your primary wellness goal?</h4>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="checkbox" name="goal" value="digest">
+                <span>Relieve Bloating / Improve Digestion</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="checkbox" name="goal" value="energy">
+                <span>Enhance Daily Energy & Focus</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="checkbox" name="goal" value="spice">
+                <span>Enjoy Spicy & Bold Flavors</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="checkbox" name="goal" value="immune">
+                <span>Strengthen Seasonal Immunity</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div style="margin-bottom: 32px;">
+            <h4
+              style="font-family: var(--font-sans); font-size: 18px; font-weight: 500; margin-bottom: 16px; text-align: start;">
+              2. What is your experience level with fermented foods?</h4>
+            <div class="quiz-options">
+              <label class="quiz-option-label">
+                <input type="radio" name="experience" value="beginner" checked>
+                <span>Beginner (New to raw kefirs/kimchis)</span>
+              </label>
+              <label class="quiz-option-label">
+                <input type="radio" name="experience" value="advanced">
+                <span>Advanced (Regularly eat active ferments)</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Generate Recommendation</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Expert Articles -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span
+          style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">Scientific
+          Literature</span>
+        <h2>Expert Resources & Research Digests</h2>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-card-image" style="height: 200px;">
+            <!-- Unique images for resource cards -->
+            <img src="assets/images/cfu.jpg" alt="Microscopic strain profile analysis graphic">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <span class="product-meta">Clinical Review</span>
+              <h3 class="product-title">Understanding Strain CFUs</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 16px;">What does colony-forming unit
+                (CFU) mean? Learn why cellular vitality is more critical than absolute count metrics.</p>
+            </div>
+            <a href="science.html"
+              style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
+              Research &rarr;</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image" style="height: 200px;">
+            <img src="assets/images/skin.jpg" alt="Handcrafted Kimchi Jar on a cutting board">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <span class="product-meta">Metabolism Guide</span>
+              <h3 class="product-title">Gut-Skin Cellular Connection</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 16px;">How bacterial signaling pathways
+                interact with cellular tissue to modulate inflammatory skin flares and acne.</p>
+            </div>
+            <a href="blog.html"
+              style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
+              Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-image" style="height: 200px;">
+            <img src="assets/images/prebiotic.jpg" alt="Dairy Kefir Bottle adjacent to mint leaves">
+          </div>
+          <div class="product-card-info" style="padding: 24px; text-align: start;">
+            <div>
+              <span class="product-meta">Dietary Science</span>
+              <h3 class="product-title">Prebiotic & Probiotic Synergy</h3>
+              <p class="product-excerpt" style="font-size: 14px; margin-bottom: 16px;">Why eating fiber-rich prebiotics
+                alongside fermented probiotics accelerates strain colonizations in the bowel.</p>
+            </div>
+            <a href="recipes.html"
+              style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
+              Recipes &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
+            microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by
+          FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

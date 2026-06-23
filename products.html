@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTURA | Premium Fermented Collections</title>
+  <meta name="description"
+    content="Shop CULTURA's range of organic live-cultured kimchi, artisan milk kefir, and oak-aged fermented hot sauces. Raw, unpasteurized, and full of active biology.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 10px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 520;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--primary);
+      color: #FAF8F3;
+      border-color: var(--primary);
+    }
+
+    .product-badges-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .product-metric-badge {
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 550;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Floating Theme and RTL Controls Wrapper -->
+  <div class="theme-rtl-controls">
+    <button class="theme-toggle" aria-label="Toggle Theme"></button>
+    <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-container">
+          <div class="logo-icon">C</div>
+          <span class="logo-text">CULTURA</span>
+        </a>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+        <a href="gut-health.html" class="nav-link">Gut Health</a>
+        <a href="science.html" class="nav-link">Science</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        
+        <button class="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <nav class="nav-menu">
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
+      <a href="story.html" class="nav-link">Our Story</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="subscriptions.html" class="nav-link">Subscriptions</a>
+      <a href="gut-health.html" class="nav-link">Gut Health</a>
+      <a href="science.html" class="nav-link">Science</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      
+    </nav>
+  </div>
+
+  <!-- Header Banner -->
+  <section class="section-padding"
+    style="background-color: var(--bg-secondary); padding-top: 150px; text-align: center;">
+    <div class="container">
+      <span
+        style="font-size: 14px; font-weight: 480; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.1em;">The
+        Live Collection</span>
+      <h1 style="margin-top: 12px; font-size: 48px;">Nourish Your Internal Forest</h1>
+      <p style="max-width: 600px; margin: 20px auto 0; color: var(--text-secondary);">Explore our range of raw, organic,
+        slow-fermented foods. Kept unpasteurized to deliver active probiotic strains direct to your digestive tract.</p>
+    </div>
+  </section>
+
+  <!-- Product Catalog section -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="kimchi">Kimchi Collection</button>
+        <button class="filter-btn" data-filter="kefir">Kefir Collection</button>
+        <button class="filter-btn" data-filter="sauces">Fermented Sauces</button>
+        <button class="filter-btn" data-filter="seasonal">Seasonal Products</button>
+        <button class="filter-btn" data-filter="bundles">Wellness Bundles</button>
+      </div>
+
+      <!-- Catalog Grid -->
+      <div class="product-grid" id="catalog-grid">
+
+        <!-- Product 1 (Kimchi) -->
+        <div class="product-card catalog-item" data-category="kimchi">
+          <span class="product-card-badge">Best Seller</span>
+          <div class="product-card-image">
+            <img src="assets/images/product1.jpg" alt="Classic Napa Kimchi Jar">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">28-Day Ferment</span>
+                <span class="product-metric-badge">12B CFU/srv</span>
+              </div>
+              <span class="product-meta">Kimchi Collection</span>
+              <h3 class="product-title">Classic Premium Kimchi</h3>
+              <p class="product-excerpt">Traditional napa cabbage kimchi loaded with heirloom chili, organic ginger, and
+                active lactobacillus strains.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$14.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 (Kimchi) -->
+        <div class="product-card catalog-item" data-category="kimchi">
+          <div class="product-card-image">
+            <img src="assets/images/product2.jpg" alt=" White Radish Daikon Kimchi Jar">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">21-Day Ferment</span>
+                <span class="product-metric-badge">10B CFU/srv</span>
+              </div>
+              <span class="product-meta">Kimchi Collection</span>
+              <h3 class="product-title">Daikon Radish Kimchi</h3>
+              <p class="product-excerpt">Crisp, cubed daikon radish cold-fermented with garlic, spring onions, and clean
+                mineral sea salt.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$15.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 (Kefir) -->
+        <div class="product-card catalog-item" data-category="kefir">
+          <span class="product-card-badge">Daily Dose</span>
+          <div class="product-card-image">
+            <img src="assets/images/product3.jpg" alt="Artisan Milk Kefir Bottle">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">30+ Strains</span>
+                <span class="product-metric-badge">25B CFU/srv</span>
+              </div>
+              <span class="product-meta">Kefir Collection</span>
+              <h3 class="product-title">Artisan Milk Kefir</h3>
+              <p class="product-excerpt">Tangy, thick milk kefir fermented from organic whole grass-fed milk using live
+                heirloom grains.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$11.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 (Kefir) -->
+        <div class="product-card catalog-item" data-category="kefir">
+          <div class="product-card-image">
+            <img src="assets/images/product4.jpg" alt="Blueberry Mint Milk Kefir Bottle">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">30+ Strains</span>
+                <span class="product-metric-badge">20B CFU/srv</span>
+              </div>
+              <span class="product-meta">Kefir Collection</span>
+              <h3 class="product-title">Blueberry Mint Kefir</h3>
+              <p class="product-excerpt">Double-fermented with organic wild blueberries and fresh peppermint leaves for
+                a refreshing probiotic drink.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$12.50</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 (Sauces) -->
+        <div class="product-card catalog-item" data-category="sauces">
+          <div class="product-card-image">
+            <img src="assets/images/product5.jpg" alt="Fermented Chili Sauce Bottle">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">12-Month Aged</span>
+                <span class="product-metric-badge">Live Enzymes</span>
+              </div>
+              <span class="product-meta">Fermented Sauces</span>
+              <h3 class="product-title">Fermented Habanero Sauce</h3>
+              <p class="product-excerpt">Fruity habanero peppers aged in oak barrels to develop complex notes, tangy
+                acidity, and natural gut enzymes.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$16.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 (Seasonal) -->
+        <div class="product-card catalog-item" data-category="seasonal">
+          <span class="product-card-badge">Seasonal</span>
+          <div class="product-card-image">
+            <img src="assets/images/product6.jpg" alt="Golden Ginger Turmeric Kimchi Jar">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">28-Day Ferment</span>
+                <span class="product-metric-badge">15B CFU/srv</span>
+              </div>
+              <span class="product-meta">Seasonal Collection</span>
+              <h3 class="product-title">Golden Ginger Kimchi</h3>
+              <p class="product-excerpt">Napa cabbage fermented with organic turmeric root, cold-pressed ginger juices,
+                and golden apples.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$16.50</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 (Seasonal) -->
+        <div class="product-card catalog-item" data-category="seasonal">
+          <span class="product-card-badge">Seasonal</span>
+          <div class="product-card-image">
+            <img src="assets/images/product7.jpg" alt="Fermented Garlic Herb Pesto Jar">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">14-Day Ferment</span>
+                <span class="product-metric-badge">Live Enzymes</span>
+              </div>
+              <span class="product-meta">Seasonal Collection</span>
+              <h3 class="product-title">Fermented Garlic Pesto</h3>
+              <p class="product-excerpt">Local ramps, organic sweet basil, pine nuts, and garlic lacto-fermented to
+                perfection with raw olive oil.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$13.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 (Bundles) -->
+        <div class="product-card catalog-item" data-category="bundles">
+          <span class="product-card-badge">Value Set</span>
+          <div class="product-card-image">
+            <!-- Unique image for restoration bundle -->
+            <img src="assets/images/product8.jpg" alt="Ultimate Gut Restoration Bundle pack">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">Complete Set</span>
+                <span class="product-metric-badge">Rotation Kit</span>
+              </div>
+              <span class="product-meta">Wellness Bundles</span>
+              <h3 class="product-title">Gut Restoration Bundle</h3>
+              <p class="product-excerpt">The ultimate package: 2 Jars of Classic Kimchi, 2 Bottles of Milk Kefir, and 1
+                Bottle of Habanero Hot Sauce.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$48.00</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9 (Seasonal/Beverage) -->
+        <div class="product-card catalog-item" data-category="seasonal">
+          <span class="product-card-badge">Seasonal</span>
+          <div class="product-card-image">
+            <img src="assets/images/product9.jpg" alt="Sun-Fermented Ginger Beer Bottle">
+          </div>
+          <div class="product-card-info">
+            <div>
+              <div class="product-badges-container">
+                <span class="product-metric-badge">14-Day Ferment</span>
+                <span class="product-metric-badge">Live Yeast</span>
+              </div>
+              <span class="product-meta">Seasonal Collection</span>
+              <h3 class="product-title">Sun-Fermented Ginger Beer</h3>
+              <p class="product-excerpt">Sun-brewed organic ginger root with active wild yeasts, sun-evaporated
+                minerals, and sparkling carbonation.</p>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">$13.50</span>
+              <a href="product-details.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">View
+                Product</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-padding" style="background-color: var(--primary); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="color: white; margin-bottom: 16px;">Customize Your Delivery Frequency</h2>
+      <p style="max-width: 600px; margin: 0 auto 32px; color: rgba(255,255,255,0.85); font-weight: 480;">Unlock a
+        permanent 15% discount on all items by enrolling in our highly customizable and pause-anytime subscription
+        cycles.</p>
+      <a href="subscriptions.html" class="btn btn-secondary"
+        style="color: white; border-color: rgba(255,255,255,0.8);">Build Subscription Crate</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="logo-container" style="margin-bottom: 20px;">
+            <div class="logo-icon">C</div>
+            <span class="logo-text">CULTURA</span>
+          </div>
+          <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
+            microecology. Traditional methods backed by clinical science.</p>
+          <form style="display: flex; gap: 8px; max-width: 320px;"
+            onsubmit="event.preventDefault(); alert('Thank you for subscribing to CULTURA!');">
+            <input type="email" placeholder="Your Email Address" class="form-control"
+              style="border-radius: 40px; padding: 12px 20px;" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">Join</button>
+          </form>
+          <div class="footer-social-links" style="display: flex; gap: 16px; margin-top: 24px;">
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Instagram">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Twitter">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-hover" style="color: var(--text-primary);" aria-label="Facebook">
+              <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Kimchi Crates</a></li>
+            <li><a href="products.html">Artisan Milk Kefirs</a></li>
+            <li><a href="products.html">Oak-Aged Sauces</a></li>
+            <li><a href="products.html">Seasonal Bundles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Gut Science</h5>
+          <ul class="footer-links">
+            <li><a href="science.html">Clinical Advisory</a></li>
+            <li><a href="gut-health.html">Microbiome Hub</a></li>
+            <li><a href="recipes.html">Pairing Recipes</a></li>
+            <li><a href="blog.html">Wellness Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Retail Partnerships</a></li>
+            <li><a href="contact.html">Wholesale Contact</a></li>
+            <li><a href="contact.html">Support FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-size: 13px;">&copy; 2026 CULTURA Wellness Inc. All rights reserved. Statements not evaluated by
+          FDA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Local Product Filtering script
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.catalog-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Toggle Active Button Class
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        // Filter cards
+        items.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'flex';
+          } else {
+            if (item.getAttribute('data-category') === filter) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // Check URL parameters for starting category filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const cat = urlParams.get('category');
+    if (cat) {
+      const activeBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+      if (activeBtn) {
+        activeBtn.click();
+      }
+    }
+  </script>
+</body>
+
+</html>
