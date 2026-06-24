@@ -136,7 +136,7 @@ function initMobileMenu() {
       controls.className = 'drawer-controls';
       controls.style.cssText = [
         'display:flex', 'flex-direction:column', 'gap:12px',
-        'padding-top:20px', 'border-top:1px solid var(--border)', 'margin-top:auto'
+        'padding-top:20px', 'border-top:1px solid var(--border)', 'margin-top:20px'
       ].join(';');
 
       /* Row: Theme toggle + RTL toggle side by side */
