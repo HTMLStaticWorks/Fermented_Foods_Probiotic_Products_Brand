@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -75,6 +75,7 @@
   <div class="theme-rtl-controls">
     <button class="theme-toggle" aria-label="Toggle Theme"></button>
     <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
+    <a href="signup.html" class="signup-btn">Sign Up</a>
   </div>
 
   <!-- Header -->
@@ -88,8 +89,15 @@
       </div>
 
       <nav class="nav-menu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="home-2.html" class="nav-link">Home 2</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false">
+            Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;"><path d="M7 10l5 5 5-5z"/></svg></span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
+          </div>
+        </div>
         <a href="story.html" class="nav-link">Our Story</a>
         <a href="products.html" class="nav-link">Products</a>
         <a href="subscriptions.html" class="nav-link">Subscriptions</a>
@@ -102,9 +110,6 @@
 
       <div class="nav-actions">
         
-        <a href="products.html" class="btn btn-secondary"
-          style="padding: 8px 20px; font-size: 12px; display: inline-flex;">Shop Now</a>
-        <a href="subscriptions.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 12px;">Subscribe</a>
         <button class="hamburger" aria-label="Toggle Menu">
           <span></span>
           <span></span>
@@ -117,8 +122,11 @@
   <!-- Mobile Drawer -->
   <div class="mobile-nav">
     <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="home-2.html" class="nav-link">Home 2</a>
+      <span class="mobile-nav-heading"
+        style="padding-inline: 16px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); font-weight: 550; display: block; margin-top: 10px; margin-bottom: 5px;">Home
+        Options</span>
+      <a href="index.html" class="nav-link" style="padding-inline-start: 24px;">Home 1 - Classic</a>
+      <a href="home-2.html" class="nav-link" style="padding-inline-start: 24px;">Home 2 - Science</a>
       <a href="story.html" class="nav-link">Our Story</a>
       <a href="products.html" class="nav-link">Products</a>
       <a href="subscriptions.html" class="nav-link">Subscriptions</a>
@@ -158,7 +166,7 @@
             Ecology</span>
           <h2 style="margin-top: 12px; margin-bottom: 24px;">What is the Gut Microbiome?</h2>
           <p style="margin-bottom: 20px;">Deep within your digestive tract lives a community of over 100 trillion
-            microbesâ€”bacteria, viruses, and fungi. Together, this ecosystem is known as the **gut microbiome**. It works
+            microbes—bacteria, viruses, and fungi. Together, this ecosystem is known as the **gut microbiome**. It works
             as a fully functional organ, helping synthesize essential vitamins, manage blood glucose response, and
             protect against cellular pathogens.</p>
           <p style="margin-bottom: 20px;">Modern sterile diets, chemical preservatives, and stress degrade the diversity
@@ -286,7 +294,7 @@
             </div>
             <a href="science.html"
               style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
-              Research &rarr;</a>
+              Research</a>
           </div>
         </div>
 
@@ -303,7 +311,7 @@
             </div>
             <a href="blog.html"
               style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
-              Article &rarr;</a>
+              Article</a>
           </div>
         </div>
 
@@ -320,7 +328,7 @@
             </div>
             <a href="recipes.html"
               style="font-weight: 550; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; font-size: 14px;">Read
-              Recipes &rarr;</a>
+              Recipes</a>
           </div>
         </div>
       </div>
@@ -332,10 +340,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-column">
-          <div class="logo-container" style="margin-bottom: 20px;">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
             <div class="logo-icon">C</div>
             <span class="logo-text">CULTURA</span>
-          </div>
+          </a>
           <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
             microecology. Traditional methods backed by clinical science.</p>
           <form style="display: flex; gap: 8px; max-width: 320px;"

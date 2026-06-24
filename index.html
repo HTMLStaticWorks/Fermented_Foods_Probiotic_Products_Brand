@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,14 +36,14 @@
 
       <nav class="nav-menu">
         <div class="nav-dropdown">
-          <button class="nav-link dropdown-toggle" aria-expanded="false">
+          <button class="nav-link dropdown-toggle active" aria-expanded="false">
             Home <span class="caret"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"
                 fill="currentColor" style="vertical-align:middle;margin-inline-start:4px;">
                 <path d="M7 10l5 5 5-5z" />
               </svg></span>
           </button>
           <div class="dropdown-menu">
-            <a href="index.html" class="dropdown-item">Home 1 - Classic</a>
+            <a href="index.html" class="dropdown-item active">Home 1 - Classic</a>
             <a href="home-2.html" class="dropdown-item">Home 2 - Science</a>
           </div>
         </div>
@@ -85,12 +85,6 @@
       <a href="contact.html" class="nav-link">Contact</a>
 
     </nav>
-    <!-- Mobile controls: RTL + Sign Up -->
-    <div class="theme-rtl-controls">
-      <button class="theme-toggle" aria-label="Toggle Theme"></button>
-      <button class="rtl-toggle" aria-label="Toggle Layout Direction">RTL</button>
-      <a href="signup.html" class="signup-btn">Sign Up</a>
-    </div>
   </div>
 
   <!-- Hero Section -->
@@ -269,19 +263,19 @@
           <!-- Standardized bullet lists with class icon and content to prevent icon word wrapping -->
           <ul class="bullet-list" style="margin-bottom: 40px;">
             <li>
-              <span class="icon">âœ“</span>
+              <span class="icon">✓</span>
               <span class="content" style="color: rgba(255,255,255,0.9);">15% off all recurring orders</span>
             </li>
             <li>
-              <span class="icon">âœ“</span>
+              <span class="icon">✓</span>
               <span class="content" style="color: rgba(255,255,255,0.9);">Custom monthly combinations</span>
             </li>
             <li>
-              <span class="icon">âœ“</span>
+              <span class="icon">✓</span>
               <span class="content" style="color: rgba(255,255,255,0.9);">Free carbon-neutral shipping</span>
             </li>
             <li>
-              <span class="icon">âœ“</span>
+              <span class="icon">✓</span>
               <span class="content" style="color: rgba(255,255,255,0.9);">Flexible pause, edit, or cancel
                 structures</span>
             </li>
@@ -337,6 +331,7 @@
           style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
           <span
             style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars" style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;">★★★★★</div>
           <p
             style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
             I struggled with chronic acid reflux and digestive fatigue for a decade. Adding a small cup of CULTURA Milk
@@ -357,6 +352,7 @@
           style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
           <span
             style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars" style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;">★★★★★</div>
           <p
             style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
             The flavor complexity of the fermented hot sauce and classical kimchi is unmatched. Knowing it is raw,
@@ -377,6 +373,7 @@
           style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 28px; justify-content: space-between;">
           <span
             style="font-size: 48px; color: var(--secondary); line-height: 1; margin-bottom: 8px; font-family: Georgia, serif;">&ldquo;</span>
+          <div class="review-stars" style="color: var(--secondary); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px;">★★★★★</div>
           <p
             style="font-family: var(--font-serif); font-size: 17px; font-style: italic; line-height: 1.7; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
             The subscriptions are incredibly flexible. The quality is consistent, delivery is cold-packed perfectly,
@@ -400,10 +397,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-column">
-          <div class="logo-container" style="margin-bottom: 20px;">
+          <a href="index.html" class="logo-container" style="margin-bottom: 20px; text-decoration: none;">
             <div class="logo-icon">C</div>
             <span class="logo-text">CULTURA</span>
-          </div>
+          </a>
           <p style="margin-bottom: 24px; max-width: 320px;">Slow-fermented nutrition designed to optimize gut
             microecology. Traditional methods backed by clinical science.</p>
           <form style="display: flex; gap: 8px; max-width: 320px;"
