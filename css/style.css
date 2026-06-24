@@ -540,7 +540,8 @@ body.dark-theme .theme-rtl-controls a.dashboard-btn {
   cursor: pointer;
   flex-direction: column;
   gap: 6px;
-  z-index: 1100;
+  position: relative;
+  z-index: 2200;
   padding: 4px;
 }
 
@@ -554,7 +555,7 @@ body.dark-theme .theme-rtl-controls a.dashboard-btn {
 
 @media (max-width: 1120px) {
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
 }
 
@@ -608,7 +609,7 @@ html[dir="rtl"] .mobile-nav.open {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 4px;
 }
 
 .mobile-nav .nav-link {
@@ -2584,7 +2585,10 @@ body.dark-theme .strain-card {
    inside hamburger drawer (all pages)
    =================================================== */
 .mobile-nav-controls {
-  display: none !important;
+  display: flex !important;
+  gap: 12px;
+  margin-top: 12px;
+  padding-inline: 16px;
 }
 
 /* ===================================================
@@ -2635,7 +2639,7 @@ body:has(.auth-container) .theme-rtl-controls {
    =================================================== */
 .mobile-nav .nav-link {
   font-size: 16px;
-  padding: 10px 0;
+  padding: 6px 0;
   width: 100%;
 }
 
@@ -2751,4 +2755,58 @@ body:has(.auth-container) .theme-rtl-controls {
   .product-title {
     min-height: 72px !important;
   }
+}
+
+/* ===================================================
+   SYSTEM FIXES APPENDED
+   =================================================== */
+
+/* 1. RTL Navbar Issue - Signup Button Overlap */
+html[dir="rtl"] .theme-rtl-controls .signup-btn {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  margin-inline-start: 10px !important;
+}
+
+/* 4. Theme Button Not Working in Mobile/Tablet View
+   Removed because floating theme/RTL controls should stay hidden near
+   the hamburger at tablet widths. */
+
+/* 2. Footer Section Mouse Hover Missing */
+.footer-links a:hover {
+  color: var(--primary) !important;
+  font-weight: 550 !important;
+}
+
+/* 3. Subscription Page FAQ RTL Alignment */
+html[dir="rtl"] .faq-header {
+  text-align: right !important;
+}
+html[dir="rtl"] .faq-header span:first-child {
+  text-align: right !important;
+  direction: ltr !important;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 8px !important;
+}
+html[dir="rtl"] .faq-content {
+  text-align: right !important;
+  direction: ltr !important;
+}
+
+/* 5. Advisory Spotlight Card Alignment */
+.advisory-spotlight-card {
+  align-items: stretch !important;
+}
+.advisory-spotlight-card img {
+  align-self: flex-start !important;
+}
+.advisory-spotlight-card > div {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+.advisory-spotlight-card > div > a {
+  margin-top: auto !important;
 }
