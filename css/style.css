@@ -233,7 +233,7 @@ body.dark-theme .header {
   justify-content: space-between;
   height: 90px;
   padding-inline: 24px;
-  max-width: 1400px;
+  
   margin: 0 auto;
   background-color: var(--bg-primary);
   backdrop-filter: blur(12px);
@@ -264,6 +264,7 @@ body.dark-theme .header {
   font-family: var(--font-serif);
   font-weight: 580;
   font-size: 18px;
+  transition: var(--transition);
 }
 
 .logo-text {
@@ -272,6 +273,18 @@ body.dark-theme .header {
   font-weight: 580;
   letter-spacing: 0.05em;
   color: var(--text-primary);
+  transition: var(--transition);
+}
+
+/* Footer Logo Link Hover Effect */
+footer .logo-container {
+  text-decoration: none;
+}
+footer .logo-container:hover .logo-text {
+  color: var(--primary);
+}
+footer .logo-container:hover .logo-icon {
+  background-color: var(--secondary);
 }
 
 .nav-menu {
@@ -398,12 +411,10 @@ body.dark-theme .theme-rtl-controls .signup-btn {
   color: #FAF8F3;
 }
 
-/* At ≤1024px: hide RTL toggle and signup btn from floating controls */
+/* At ≤1024px: completely remove floating controls to prevent any overlap */
 @media (max-width: 1024px) {
-
-  .theme-rtl-controls .rtl-toggle,
-  .theme-rtl-controls .signup-btn {
-    display: none;
+  .theme-rtl-controls {
+    display: none !important;
   }
 }
 
@@ -571,11 +582,11 @@ body.nav-open .theme-rtl-controls {
   height: 100vh;
   background-color: var(--bg-primary);
   z-index: 1050;
-  padding: 120px 40px 40px;
+  padding: 16px 24px 40px;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
   transition: inset-inline-end 0.3s ease-in-out;
   overflow-y: auto;
 }
@@ -1682,8 +1693,8 @@ html[dir="rtl"] .faq-header {
 
 html[dir="rtl"] .faq-header span:first-child {
   text-align: end;
-  padding-inline-end: 0;
-  padding-inline-start: 8px;
+  padding-inline-start: 0;
+  padding-inline-end: 8px;
 }
 
 /* Mobile RTL FAQ - ensure text doesn't break layout */
@@ -1699,10 +1710,12 @@ html[dir="rtl"] .faq-header span:first-child {
     padding-inline-end: 8px;
   }
 
-  html[dir="rtl"] .faq-header span:first-child {
-    text-align: end;
-    padding-inline-end: 0;
-    padding-inline-start: 8px;
+  .faq-content {
+    padding: 0 16px;
+  }
+
+  .faq-item.active .faq-content {
+    padding: 16px 16px;
   }
 }
 
@@ -2015,6 +2028,12 @@ html[dir="rtl"] .timeline-dot {
 .dropdown-item:hover {
   background-color: var(--bg-secondary);
   color: var(--primary);
+}
+
+.dropdown-item.active {
+  background-color: var(--bg-secondary);
+  color: var(--primary);
+  font-weight: 550;
 }
 
 /* RTL Dropdown adjust */
@@ -2381,8 +2400,8 @@ body.dark-theme .map-road {
 .strain-card-grid {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 24px !important;
-  margin-top: 32px !important;
+  gap: 16px !important;
+  margin-top: 20px !important;
 }
 
 @media (max-width: 768px) {
@@ -2393,11 +2412,12 @@ body.dark-theme .map-road {
 
 .strain-card {
   width: 100% !important;
+  height: 100% !important;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-left: 4px solid var(--primary);
   border-radius: 8px;
-  padding: 24px;
+  padding: 16px 20px;
 }
 
 body.dark-theme .strain-card {
@@ -2411,9 +2431,9 @@ body.dark-theme .strain-card {
    TABLET IMAGE CROP FIXES — Batch Analytics (science)
    benefit-icon img full cover in tab view
    =================================================== */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .benefit-icon {
-    height: 200px;
+    height: 350px !important;
   }
 
   .benefit-icon img {
@@ -2542,10 +2562,15 @@ body.dark-theme .strain-card {
    =================================================== */
 @media (max-width: 1024px) {
 
-  .theme-rtl-controls .rtl-toggle,
-  .theme-rtl-controls .signup-btn,
-  .theme-rtl-controls .theme-toggle {
+  /* signup btn hidden at ≤1024 — accessible via drawer */
+  .theme-rtl-controls .signup-btn {
     display: none !important;
+  }
+
+  /* Theme + RTL remain visible as small circular buttons at top-right */
+  .theme-rtl-controls .rtl-toggle,
+  .theme-rtl-controls .theme-toggle {
+    display: flex !important;
   }
 
   /* NAV-ACTIONS: only the hamburger stays visible */
@@ -2603,4 +2628,127 @@ body:has(.auth-container) .theme-rtl-controls {
   justify-content: center !important;
   font-size: 11px !important;
   flex-shrink: 0 !important;
+}
+
+/* ===================================================
+   MOBILE NAV — tighter link font size for smaller screens
+   =================================================== */
+.mobile-nav .nav-link {
+  font-size: 16px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* ===================================================
+   TABLET (769px-1024px) — visual-pane image fix
+   Prevents images from being cropped; explicit height
+   =================================================== */
+@media (max-width: 1024px) {
+  .visual-pane {
+    min-height: 400px !important;
+    height: 100% !important;
+  }
+
+  .visual-pane img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  /* story/contact page section images */
+  .editorial-grid .visual-pane {
+    min-height: 400px !important;
+    height: 100% !important;
+  }
+}
+
+/* ===================================================
+   SCIENCE PAGE — strain-card grid reduced at 1024px
+   =================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .strain-card-grid {
+    gap: 8px !important;
+    margin-top: 16px !important;
+  }
+
+  .strain-card {
+    max-width: none !important;
+    padding: 12px !important;
+  }
+}
+
+/* ===================================================
+   BLOG — Trending Wellness Cards heading alignment
+   Equal min-height on headings so body text aligns
+   =================================================== */
+.trending-wellness-grid .product-card h3 {
+  min-height: 56px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ===================================================
+   BLOG — Advisory Spotlight heading alignment
+   Equal min-height on h3 so paragraph text aligns
+   =================================================== */
+.advisory-spotlight-card h3 {
+  min-height: 60px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ===================================================
+   RECIPES PAGE — last-card centering at 1024px
+   If only one card in last row, center it
+   =================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid.recipe-grid {
+    justify-content: center;
+  }
+
+  /* Center orphaned last card */
+  .product-grid .recipe-card:last-child:nth-child(odd) {
+    margin-inline: auto;
+  }
+
+  /* Recipes tab view — 3rd card center-aligned */
+  .product-grid .recipe-card:nth-child(3):last-child,
+  .product-grid .recipe-card:nth-child(3n+1):last-child {
+    margin-inline: auto;
+  }
+}
+
+/* ===================================================
+   BLOG — General Posts Grid — last card center at 1024px
+   =================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid .product-card:last-child:nth-child(odd) {
+    margin-inline: auto;
+  }
+}
+/* Keep product cards 2x2 on iPad Mini tab view */
+@media (min-width: 600px) and (max-width: 768px) {
+  .product-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+  }
+  .product-grid .product-card {
+    flex: 0 0 calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    min-width: 260px !important;
+    height: auto !important;
+    align-self: stretch !important;
+  }
+}
+
+/* Align product card subtext and CTA by standardizing title height in tab view */
+@media (max-width: 1024px) {
+  .product-title {
+    min-height: 72px !important;
+  }
 }
