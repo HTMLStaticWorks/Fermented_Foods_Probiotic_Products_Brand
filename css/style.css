@@ -233,7 +233,7 @@ body.dark-theme .header {
   justify-content: space-between;
   height: 90px;
   padding-inline: 24px;
-  
+
   margin: 0 auto;
   background-color: var(--bg-primary);
   backdrop-filter: blur(12px);
@@ -280,9 +280,11 @@ body.dark-theme .header {
 footer .logo-container {
   text-decoration: none;
 }
+
 footer .logo-container:hover .logo-text {
   color: var(--primary);
 }
+
 footer .logo-container:hover .logo-icon {
   background-color: var(--secondary);
 }
@@ -2731,6 +2733,7 @@ body:has(.auth-container) .theme-rtl-controls {
     margin-inline: auto;
   }
 }
+
 /* Keep product cards 2x2 on iPad Mini tab view */
 @media (min-width: 600px) and (max-width: 768px) {
   .product-grid {
@@ -2741,6 +2744,7 @@ body:has(.auth-container) .theme-rtl-controls {
     align-items: stretch !important;
     gap: 24px !important;
   }
+
   .product-grid .product-card {
     flex: 0 0 calc(50% - 12px) !important;
     max-width: calc(50% - 12px) !important;
@@ -2784,12 +2788,14 @@ html[dir="rtl"] .theme-rtl-controls .signup-btn {
 html[dir="rtl"] .faq-header {
   text-align: right !important;
 }
+
 html[dir="rtl"] .faq-header span:first-child {
   text-align: right !important;
   direction: ltr !important;
   padding-inline-start: 0 !important;
   padding-inline-end: 8px !important;
 }
+
 html[dir="rtl"] .faq-content {
   text-align: right !important;
   direction: ltr !important;
@@ -2799,14 +2805,58 @@ html[dir="rtl"] .faq-content {
 .advisory-spotlight-card {
   align-items: stretch !important;
 }
+
 .advisory-spotlight-card img {
   align-self: flex-start !important;
 }
-.advisory-spotlight-card > div {
+
+.advisory-spotlight-card>div {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 !important;
 }
-.advisory-spotlight-card > div > a {
+
+.advisory-spotlight-card>div>a {
   margin-top: auto !important;
+}
+
+/* ===================================================
+   SHARED TOGGLE BUTTON COMPONENT
+   =================================================== */
+button.theme-toggle,
+button.rtl-toggle {
+  box-sizing: border-box !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 50% !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 520 !important;
+  box-shadow: var(--card-shadow) !important;
+  transform: scale(1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+button.theme-toggle svg,
+button.rtl-toggle svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+button.theme-toggle:hover,
+button.rtl-toggle:hover {
+  transform: scale(1) translateY(-2px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
 }
