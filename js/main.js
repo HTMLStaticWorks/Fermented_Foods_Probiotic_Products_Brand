@@ -166,6 +166,20 @@ function initMobileMenu() {
         'text-transform:uppercase', 'letter-spacing:0.06em', 'transition:var(--transition)', 'flex-shrink:0'
       ].join(';');
 
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcons(isDark ? 'dark' : 'light');
+      });
+
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+        const nextDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+        applyLayoutDirection(nextDir);
+        localStorage.setItem('layout-direction', nextDir);
+      });
+
       row.appendChild(themeBtn);
       row.appendChild(rtlBtn);
 
