@@ -532,6 +532,12 @@ body.dark-theme .theme-rtl-controls a.dashboard-btn {
   transform: translateY(-2px);
 }
 
+.subscriber-btn:hover {
+  background-color: white !important;
+  color: var(--primary) !important;
+  border-color: white !important;
+}
+
 /* ===================================================
    MOBILE HAMBURGER
    =================================================== */
@@ -985,9 +991,13 @@ body.dark-theme .faq-item {
 .strain-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--card-shadow-hover);
-  border-color: var(--primary);
 }
 
+[class*="-card"] .btn:hover {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary) !important;
+}
 /* ===================================================
    CARD HEADING HEIGHT ALIGNMENT
    Equal min-height so sub-content starts at same line
@@ -2451,9 +2461,9 @@ body.dark-theme .strain-card {
     height: 180px !important;
   }
 
-  /* blog page — general card image height fix on tablet */
+  /* blog page & products page — general card image height fix on tablet */
   .product-grid .product-card-image {
-    height: 180px !important;
+    height: 260px !important;
   }
 
   /* blog Trending Wellness Topics — wider cards at 1024px */
@@ -2723,6 +2733,17 @@ body:has(.auth-container) .theme-rtl-controls {
   .product-grid .recipe-card:nth-child(3n+1):last-child {
     margin-inline: auto;
   }
+}
+
+.recipe-link {
+  font-weight: 550;
+  color: var(--primary);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+body.dark-theme .recipe-link {
+  color: var(--secondary);
 }
 
 /* ===================================================
